@@ -6,6 +6,12 @@ builds:
     goarch:
       - amd64
       - arm64
+    ldflags:
+      - -s -w
+      - -X 'github.com/xMlex/go-audit-shipper/internal/model.Version={{.Version}}'
+      - -X 'github.com/xMlex/go-audit-shipper/internal/model.Commit={{.Commit}}'
+      - -X 'github.com/xMlex/go-audit-shipper/internal/model.ShortCommit={{.ShortCommit}}'
+      - -X 'github.com/xMlex/go-audit-shipper/internal/model.BuildDate={{.Date}}'
 archives:
   - format: tar.gz
     name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
