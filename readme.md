@@ -36,7 +36,9 @@ go build .
 
 ```shell
 # stdout output
-./go-audit-shipper -log /var/log/audit/audit.log 
+./go-audit-shipper --log /var/log/audit/audit.log 
 # Gelf over UDP
-./go-audit-shipper -log test.log -output gelf_udp://graylog.example.org:12201
+./go-audit-shipper --log test.log --output gelf_udp://graylog.example.org:12201
+# Show all commands
+./go-audit-shipper help
 ```
