@@ -14,4 +14,4 @@ builds:
       - -X 'github.com/xMlex/go-audit-shipper/internal/model.BuildDate={{.Date}}'
 archives:
   - format: tar.gz
-    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
